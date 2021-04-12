@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --mainHover: #6b5ba0;
+  --black: #1e1e1e;
+  --light: #f3f1fa;
+  --white: #fff;
+  --link: #c2b780;
+
+  --purple-border: #48397a;
+  --error: #ce5353;
+  --errorHover: #e47070;
+  --hoverTime: 0.15s;
+  --border: #c2ba92;
+  --board: #ebe8e9;
+  --lightBg: #d2cdde;
+  --tooltipBg: #fcfcfd;
+
+  --size-text-5xl: 72px;
+  --size-text-4xl: 48px;
+  --size-text-l: 18px;
+  --size-text-m: 16px;
+  --size-text-s: 14px;
+  --size-text-xs: 12px;
+}
+
+#root {
+  height: 100%;
+}

@@ -1,0 +1,16 @@
+.form-result {
+  &__field {
+    margin: 15px 0;
+  }
+
+  &__group {
+    padding: 15px;
+    background-color: var(--tooltipBg);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

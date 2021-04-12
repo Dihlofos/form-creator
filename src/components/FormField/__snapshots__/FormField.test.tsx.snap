@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentBox testing snapshot matches 1`] = `
+<div
+  className="wrapper-input-component"
+>
+  <div
+    className="ant-row ant-form-item label-input-component"
+    style={Object {}}
+  >
+    <div
+      className="ant-col ant-form-item-label"
+      style={Object {}}
+    >
+      <label
+        className=""
+        htmlFor="name"
+        title="Имя"
+      >
+        Имя
+      </label>
+    </div>
+    <div
+      className="ant-col ant-form-item-control"
+      style={Object {}}
+    >
+      <div
+        className="ant-form-item-control-input"
+      >
+        <div
+          className="ant-form-item-control-input-content"
+        />
+      </div>
+    </div>
+  </div>
+  <input
+    className="ant-input input-component"
+    id="name"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Введите имя"
+    type="text"
+    value="Женя Самсонов"
+  />
+</div>
+`;

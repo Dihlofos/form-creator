@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "ES5",
+    "outDir": "./dist",
+    "declaration": false,
+    "downlevelIteration": true,
+    "module": "esnext",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "jsx": "react"
+  },
+  "types": ["node"],
+  "include": ["src/**/**/*"],
+  "exclude": ["node_modules"]
+}

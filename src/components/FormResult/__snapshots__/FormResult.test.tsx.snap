@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormResult test snapshot test 1`] = `
+<div
+  className="form-result"
+>
+  <h2
+    className="form-result__title"
+  >
+    Тестовая форма
+  </h2>
+  <form
+    className="form-result__form"
+  >
+    <div
+      className="form-result__field"
+    >
+      <div
+        className="wrapper-input-component"
+      >
+        <div
+          className="ant-row ant-form-item label-input-component"
+          style={Object {}}
+        >
+          <div
+            className="ant-col ant-form-item-label"
+            style={Object {}}
+          >
+            <label
+              className=""
+              htmlFor="name"
+              title="Имя"
+            >
+              Имя
+            </label>
+          </div>
+          <div
+            className="ant-col ant-form-item-control"
+            style={Object {}}
+          >
+            <div
+              className="ant-form-item-control-input"
+            >
+              <div
+                className="ant-form-item-control-input-content"
+              />
+            </div>
+          </div>
+        </div>
+        <input
+          className="ant-input input-component"
+          id="name"
+          name="name"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Введите имя"
+          type="text"
+          value="Женя Самсонов"
+        />
+      </div>
+    </div>
+    <div
+      className="form-result__field"
+    >
+      <div
+        className="wrapper-input-component"
+      >
+        <div
+          className="ant-row ant-form-item label-input-component"
+          style={Object {}}
+        >
+          <div
+            className="ant-col ant-form-item-label"
+            style={Object {}}
+          >
+            <label
+              className=""
+              htmlFor="number"
+              title="Числа"
+            >
+              Числа
+            </label>
+          </div>
+          <div
+            className="ant-col ant-form-item-control"
+            style={Object {}}
+          >
+            <div
+              className="ant-form-item-control-input"
+            >
+              <div
+                className="ant-form-item-control-input-content"
+              />
+            </div>
+          </div>
+        </div>
+        <input
+          className="ant-input input-component"
+          id="number"
+          name="number"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Введите число"
+          type="number"
+          value="5"
+        />
+      </div>
+    </div>
+    <div
+      className="form-result__field"
+    >
+      <div
+        className="ant-row ant-form-item label-input-component"
+        style={Object {}}
+      >
+        <div
+          className="ant-col ant-form-item-label"
+          style={Object {}}
+        >
+          <label
+            className=""
+            htmlFor="textarea"
+            title="Опишите нечто"
+          >
+            Опишите нечто
+          </label>
+        </div>
+        <div
+          className="ant-col ant-form-item-control"
+          style={Object {}}
+        >
+          <div
+            className="ant-form-item-control-input"
+          >
+            <div
+              className="ant-form-item-control-input-content"
+            />
+          </div>
+        </div>
+      </div>
+      <textarea
+        className="ant-input textarea"
+        id="textarea"
+        label="Опишите нечто"
+        name="textarea"
+        onChange={[Function]}
+        onCompositionEnd={[Function]}
+        onCompositionStart={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Введите многострочный текст"
+        style={Object {}}
+        value="Многострочный текст"
+      />
+    </div>
+    <div
+      className="form-result__field"
+    >
+      <label
+        className="ant-checkbox-wrapper"
+      >
+        <span
+          className="ant-checkbox ant-checkbox-checked"
+          style={Object {}}
+        >
+          <input
+            checked={true}
+            className="ant-checkbox-input"
+            id="checkbox"
+            name="checkbox"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onKeyUp={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="ant-checkbox-inner"
+          />
+        </span>
+        <span>
+          Чекбокс
+        </span>
+      </label>
+    </div>
+    <div
+      className="form-result__field"
+    >
+      <div
+        className="wrapper-input-component"
+      >
+        <div
+          className="ant-row ant-form-item label-input-component"
+          style={Object {}}
+        >
+          <div
+            className="ant-col ant-form-item-label"
+            style={Object {}}
+          >
+            <label
+              className=""
+              htmlFor="date"
+              title="Дата"
+            >
+              Дата
+            </label>
+          </div>
+          <div
+            className="ant-col ant-form-item-control"
+            style={Object {}}
+          >
+            <div
+              className="ant-form-item-control-input"
+            >
+              <div
+                className="ant-form-item-control-input-content"
+              />
+            </div>
+          </div>
+        </div>
+        <input
+          className="ant-input input-component"
+          id="date"
+          name="date"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Введите дату"
+          type="date"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="form-result__field"
+    >
+      <h4>
+        Как вам в IT?
+      </h4>
+      <div
+        className="ant-radio-group ant-radio-group-outline"
+        id="howit"
+      >
+        <label
+          className="ant-radio-wrapper"
+        >
+          <span
+            className="ant-radio"
+            style={Object {}}
+          >
+            <input
+              checked={false}
+              className="ant-radio-input"
+              name="howit"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              type="radio"
+              value="great"
+            />
+            <span
+              className="ant-radio-inner"
+            />
+          </span>
+          <span>
+            Отлично, нравится
+          </span>
+        </label>
+        <label
+          className="ant-radio-wrapper"
+        >
+          <span
+            className="ant-radio"
+            style={Object {}}
+          >
+            <input
+              checked={false}
+              className="ant-radio-input"
+              name="howit"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              type="radio"
+              value="acceptable"
+            />
+            <span
+              className="ant-radio-inner"
+            />
+          </span>
+          <span>
+            Приемлемо
+          </span>
+        </label>
+        <label
+          className="ant-radio-wrapper"
+        >
+          <span
+            className="ant-radio"
+            style={Object {}}
+          >
+            <input
+              checked={false}
+              className="ant-radio-input"
+              name="howit"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              type="radio"
+              value="burned"
+            />
+            <span
+              className="ant-radio-inner"
+            />
+          </span>
+          <span>
+            Выгорел
+          </span>
+        </label>
+      </div>
+    </div>
+  </form>
+  <div
+    className="form-result__buttons"
+  >
+    <div
+      className="form-result__field"
+    >
+      <button
+        className="ant-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          Отправить
+        </span>
+      </button>
+    </div>
+    <div
+      className="form-result__field"
+    >
+      <button
+        className="ant-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          Сбросить
+        </span>
+      </button>
+    </div>
+    <div
+      className="form-result__field"
+    >
+      <button
+        className="ant-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          Редактировать
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
