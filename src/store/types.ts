@@ -9,7 +9,16 @@ export type FormStructure = {
 
 export type FormState = {
   formData: FormStructure;
+  validate: {
+    errors: ValidationError[];
+    status: 'pending' | 'error' | 'success' | 'idle';
+  };
   activeTab: 'config' | 'result';
+};
+
+export type ValidationError = {
+  path?: string;
+  message?: string;
 };
 
 export type Store = {

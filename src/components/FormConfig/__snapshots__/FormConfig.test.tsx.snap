@@ -116,10 +116,14 @@ exports[`Common App test FormTabs shows 1`] = `
   ]
 }"
   />
-  <button
-    className="ant-btn form-config__button"
-    onClick={[Function]}
-    type="button"
-  />
+  <div
+    className="form-config__bottom"
+  >
+    <button
+      className="ant-btn form-config__button"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
 </div>
 `;

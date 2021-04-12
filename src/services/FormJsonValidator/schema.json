@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "properties": {
+    "title": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "text",
+              "number",
+              "textarea",
+              "checkbox",
+              "date",
+              "radio",
+              "submit",
+              "button",
+              "reset"
+            ]
+          },
+          "name": { "type": "string" },
+          "placeholder": { "type": "string" },
+          "value": { "type": "string" },
+          "defaultValue": { "type": "string" },
+          "defaultChecked": { "type": "boolean" },
+          "radioValues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": { "type": "string" },
+                "value": { "type": "string" }
+              },
+              "required": ["label"],
+              "additionalProperties": false
+            }
+          },
+          "min": { "type": "number" },
+          "max": { "type": "number" }
+        },
+        "required": ["id"],
+        "additionalProperties": false
+      }
+    },
+    "buttons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "action": { "type": "string" },
+          "label": { "type": "string" },
+          "name": { "type": "string" }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["items"],
+  "additionalProperties": false
+}

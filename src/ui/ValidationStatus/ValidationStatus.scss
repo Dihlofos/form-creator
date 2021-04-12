@@ -1,0 +1,10 @@
+.validation-status {
+  font-size: 18px;
+  &--error {
+    color: var(--error);
+  }
+
+  &--success {
+    color: var(--success);
+  }
+}

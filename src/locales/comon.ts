@@ -4,6 +4,9 @@ const resources = {
       config: 'Config',
       result: 'Result',
       apply: 'Apply',
+      pending: 'Processing',
+      error: 'Error',
+      success: 'Success',
     },
   },
   ru: {
@@ -11,6 +14,9 @@ const resources = {
       config: 'Конфигурация',
       result: 'Результат',
       apply: 'Применить',
+      pending: 'Ожидаем',
+      error: 'Ошибка',
+      success: 'Успех',
     },
   },
 };

@@ -9,14 +9,11 @@ const mockStore = configureMockStore();
 
 describe('Common App test', () => {
   it('FormTabs shows', () => {
-    const props = {
-      onConfigApply: () => {},
-    };
     const store = mockStore(InitialState);
 
     const tree = create(
       <Provider store={store}>
-        <FormConfig {...props} />
+        <FormConfig />
       </Provider>
     ).toJSON();
     expect(tree).toMatchSnapshot();

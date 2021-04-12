@@ -28,6 +28,7 @@ module.exports = {
       styles: path.join(__dirname, 'src/styles'),
       utils: path.join(__dirname, 'src/utils'),
       store: path.join(__dirname, 'src/store'),
+      services: path.join(__dirname, 'src/services'),
     },
     extensions: ['.ts', '.tsx', '.js'],
   },

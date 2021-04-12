@@ -1,27 +1,23 @@
 import React, { ChangeEvent, FC, useCallback, useState } from 'react';
 import { withTranslation, TFunction, WithTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
-import { setFormData } from 'store';
-import { Button, TextArea } from 'ui';
+import { useDispatch, useSelector } from 'react-redux';
+import { doValidate, getValidateErrors, getValidateStatus } from 'store';
+import { Button, TextArea, ValidationErrors, ValidationStatus } from 'ui';
 
 import './FormConfig.scss';
 import FormMock from './mock';
 
-import FormJsonValidator from '../../utils/jsonValidation';
-
 interface FormConfigProps extends WithTranslation {
-  onConfigApply: () => void;
   t: TFunction;
 }
 
-const FormConfig: FC<FormConfigProps> = ({ t, onConfigApply }) => {
+const FormConfig: FC<FormConfigProps> = ({ t }) => {
   const dispatch = useDispatch();
+  const status = useSelector(getValidateStatus);
+  const errors = useSelector(getValidateErrors);
   const [config, setConfig] = useState<string>(
     JSON.stringify(FormMock, null, 2)
   );
-
-  FormJsonValidator();
-
   const handleConfigChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement>) => {
       const el = e.target as HTMLTextAreaElement;
@@ -31,16 +27,19 @@ const FormConfig: FC<FormConfigProps> = ({ t, onConfigApply }) => {
   );
 
   const handleApply = useCallback(() => {
-    onConfigApply();
-    dispatch(setFormData(JSON.parse(config)));
-  }, [config, onConfigApply, dispatch]);
+    dispatch(doValidate(config));
+  }, [config, dispatch]);
 
   return (
     <div className="form-config">
       <TextArea rows={30} value={config} onChange={handleConfigChange} />
-      <Button className="form-config__button" onClick={handleApply}>
-        {t('apply')}
-      </Button>
+      <div className="form-config__bottom">
+        <Button className="form-config__button" onClick={handleApply}>
+          {t('apply')}
+        </Button>
+        <ValidationStatus status={status} />
+      </div>
+      {errors.length ? <ValidationErrors errors={errors} /> : null}
     </div>
   );
 };

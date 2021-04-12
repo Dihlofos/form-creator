@@ -88,6 +88,10 @@ const InitialState: { form: FormState } = {
         },
       ],
     },
+    validate: {
+      errors: [],
+      status: 'idle',
+    },
     activeTab: 'config',
   },
 };

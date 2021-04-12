@@ -6,6 +6,8 @@ export { default as Row } from './Row/Row';
 export { default as Radio } from './Radio/Radio';
 export { default as Checkbox } from './Checkbox/Checkbox';
 export { default as Input } from './Input/Input';
+export { default as ValidationStatus } from './ValidationStatus/ValidationStatus';
+export { default as ValidationErrors } from './ValidationErrors/ValidationErrors';
 export { default as InputNumber } from './InputNumber/InputNumber';
 export { default as TextArea } from './TextArea/TextArea';
 export { Tabs, TabPane } from './Tabs/Tabs';
