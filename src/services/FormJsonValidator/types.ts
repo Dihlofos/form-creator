@@ -1,6 +1,7 @@
-// the same of FormStructure but with no optional parameters just to use in json validation
 export type FormStructureSchema = {
   title: string;
+  action: string;
+  method: string;
   items: {
     type:
       | 'text'
