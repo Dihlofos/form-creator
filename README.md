@@ -7,6 +7,7 @@
 - Form data is connected with store
 - You can add buttons and point out an action which will be called by onClick event. (now it works with "edit" button, just for example)
 - So, to submit a form, you should add button with action, and do submit logic as this action is called, fetched form data from redux state
+- There is i18next plugged in to project and you can change languages, files for locales you can find in folder locales, english is set by default
 
 # Usage
 
