@@ -1,6 +1,6 @@
 # Form creater
 
-### Form createrCreating form from JSON Object
+### Creating form from JSON Object
 
 - You can look at json format and edit it here: https://github.com/Dihlofos/form-creator/blob/main/src/services/FormJsonValidator/schema.json
 - By pushing on Apply button in Config the json validation starts and as it succeed, Result tab opens;
