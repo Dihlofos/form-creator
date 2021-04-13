@@ -31,6 +31,8 @@ exports[`Common App test FormTabs shows 1`] = `
     style={Object {}}
     value="{
   \\"title\\": \\"Тестовая форма\\",
+  \\"action\\": \\"\\",
+  \\"method\\": \\"POST\\",
   \\"items\\": [
     {
       \\"id\\": \\"name\\",

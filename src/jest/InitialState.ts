@@ -4,6 +4,8 @@ const InitialState: { form: FormState } = {
   form: {
     formData: {
       title: 'Тестовая форма',
+      action: '',
+      method: '',
       items: [
         {
           id: 'name',
@@ -93,6 +95,7 @@ const InitialState: { form: FormState } = {
       status: 'idle',
     },
     activeTab: 'config',
+    formLocalState: {},
   },
 };
 

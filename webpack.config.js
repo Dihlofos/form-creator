@@ -1,12 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
 
-module.exports = {
+const config = {
   mode: isDev ? 'development' : 'production',
   entry: './src/index.tsx',
   output: {
@@ -19,7 +20,7 @@ module.exports = {
     compress: true,
     port: 3000,
   },
-  devtool: isDev ? 'source-map' : false,
+  devtool: 'source-map',
   resolve: {
     alias: {
       components: path.join(__dirname, 'src/components'),
@@ -31,6 +32,9 @@ module.exports = {
       services: path.join(__dirname, 'src/services'),
     },
     extensions: ['.ts', '.tsx', '.js'],
+  },
+  performance: {
+    hints: false,
   },
   module: {
     rules: [
@@ -54,34 +58,9 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
-      {
-        test: /\.(png|jpe?g|gif|icon|xml|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: './assets/images',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(woff|woff2|ttf|otf|eot)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: './assets/fonts',
-            },
-          },
-        ],
-      },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin({
-      dangerouslyAllowCleanPatternsOutsideProject: true,
-    }),
     new HtmlWebpackPlugin({
       template: './www/index.html',
     }),
@@ -90,3 +69,12 @@ module.exports = {
     }),
   ],
 };
+
+if (isProd) {
+  config.optimization = {
+    minimize: true,
+    minimizer: [new UglifyJsPlugin(), new CssMinimizerPlugin()],
+  };
+}
+
+module.exports = config;

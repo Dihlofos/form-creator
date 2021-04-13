@@ -2,8 +2,6 @@ import React, { FC } from 'react';
 import { Input, Form } from 'antd';
 import { TextAreaProps } from 'antd/lib/input';
 
-import 'antd/lib/input/style/css';
-
 import './TextArea.scss';
 import { OwnProps } from 'ui/Input/types';
 

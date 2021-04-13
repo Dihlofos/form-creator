@@ -1,20 +1,21 @@
-import React, { FC, useCallback, useMemo, useState } from 'react';
+import React, { FC, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { doCustomAction, getFormData } from 'store';
-import { transformToState } from 'utils';
+import {
+  doCustomAction,
+  getFormData,
+  getFormLocalState,
+  setFormLocalState,
+} from 'store';
 import { Button } from 'ui';
 import FormField from '../FormField/FormField';
 
 import './FormResult.scss';
-import { FormLocalState } from './types';
 
 const FormResult: FC = () => {
   const form = useSelector(getFormData);
+  const formState = useSelector(getFormLocalState);
   const dispatch = useDispatch();
-  const { title, items, buttons } = form;
-  const [formState, setFormState] = useState<FormLocalState>(
-    transformToState(items)
-  );
+  const { title, items, buttons, action: formAction, method } = form;
 
   const handleButtonClick = useCallback(
     (action: string | undefined) => () => {
@@ -30,30 +31,35 @@ const FormResult: FC = () => {
       const { value, name, checked } = e.target;
 
       if (!value) {
-        setFormState({ ...formState, [name]: checked });
+        dispatch(setFormLocalState({ ...formState, [name]: checked }));
         return;
       }
 
-      setFormState({ ...formState, [name]: value });
+      dispatch(setFormLocalState({ ...formState, [name]: value }));
     },
-    [formState]
+    [dispatch, formState]
   );
 
   const renderFields = useMemo(
     () => (
-      <form className="form-result__form">
+      <form
+        className="form-result__form"
+        action={formAction && formAction}
+        method={method && method}
+      >
         {items.map((field) => (
           <div className="form-result__field" key={field.id}>
             <FormField
               field={field}
               onChange={handleChange}
               value={formState[field.name]}
+              checked={formState[field.name]}
             />
           </div>
         ))}
       </form>
     ),
-    [items, handleChange, formState]
+    [items, handleChange, formAction, method, formState]
   );
 
   const renderButtons = useMemo(

@@ -1,9 +1,11 @@
 import { FormState, FormStructure, ValidationError } from 'store/types';
 import { ThunkAction } from 'redux-thunk';
-import { shrinkErrorArray } from 'utils';
+import { shrinkErrorArray, transformToState } from 'utils';
+import { FormLocalState } from 'components/FormResult/types';
 import { FormValidator } from '../../services/index';
 import {
   FORM_SET_DATA,
+  FORM_SET_LOCALSTATE,
   FORM_SET_TAB,
   FORM_VALIDATE_ERROR,
   FORM_VALIDATE_GO,
@@ -12,6 +14,11 @@ import {
 
 const setFormData = (payload: FormStructure) => ({
   type: FORM_SET_DATA,
+  payload,
+});
+
+const setFormLocalState = (payload: FormLocalState) => ({
+  type: FORM_SET_LOCALSTATE,
   payload,
 });
 
@@ -50,6 +57,7 @@ const doValidate = (
     if (FormValidator.validate(parsedConfig)) {
       dispatch(setFormData(parsedConfig));
       dispatch(formValidateSuccess());
+      dispatch(setFormLocalState(transformToState(parsedConfig.items)));
       dispatch(setActiveTab('result'));
     } else {
       dispatch(formValidateError(shrinkErrorArray(FormValidator.errors)));
@@ -68,6 +76,7 @@ const doValidate = (
 
 export {
   setFormData,
+  setFormLocalState,
   setActiveTab,
   formValidate,
   formValidateSuccess,

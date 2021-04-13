@@ -1,8 +1,11 @@
 import { Field } from 'components/FormField/types';
+import { FormLocalState } from 'components/FormResult/types';
 import { Button } from 'ui/Button/types';
 
 export type FormStructure = {
   title?: string;
+  action?: string;
+  method?: string;
   items: Field[];
   buttons?: Button[];
 };
@@ -14,6 +17,7 @@ export type FormState = {
     status: 'pending' | 'error' | 'success' | 'idle';
   };
   activeTab: 'config' | 'result';
+  formLocalState: FormLocalState;
 };
 
 export type ValidationError = {

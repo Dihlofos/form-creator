@@ -20,6 +20,7 @@ export type Field = {
   name: string;
   placeholder?: string;
   value?: string;
+  checked?: boolean;
   defaultValue?: string;
   defaultChecked?: boolean;
   radioValues?: RadioField[];
@@ -30,5 +31,6 @@ export type Field = {
 export type FormFieldProps = {
   field: Field;
   value: string | boolean;
+  checked?: string | boolean;
   onChange: (e: any) => void;
 };

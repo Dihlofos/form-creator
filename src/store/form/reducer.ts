@@ -2,6 +2,7 @@ import { FormState } from '../types';
 import {
   FORM_EDIT,
   FORM_SET_DATA,
+  FORM_SET_LOCALSTATE,
   FORM_SET_TAB,
   FORM_VALIDATE_ERROR,
   FORM_VALIDATE_GO,
@@ -10,6 +11,8 @@ import {
 
 export const initialState: FormState = {
   formData: {
+    action: '',
+    method: '',
     title: '',
     items: [],
     buttons: [],
@@ -19,6 +22,7 @@ export const initialState: FormState = {
     status: 'idle',
   },
   activeTab: 'config',
+  formLocalState: {},
 };
 
 const reducer = (state = initialState, action: any) => {
@@ -32,6 +36,11 @@ const reducer = (state = initialState, action: any) => {
       return {
         ...state,
         activeTab: action.payload,
+      };
+    case FORM_SET_LOCALSTATE:
+      return {
+        ...state,
+        formLocalState: action.payload,
       };
     // this action will fires from result-form button
     case FORM_EDIT:

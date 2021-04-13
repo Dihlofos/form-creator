@@ -12,7 +12,7 @@ const ValidationStatus: FC<ValidationStatusProps> = ({ status, t }) => {
   if (status === 'idle') return null;
   return (
     <div className={`validation-status validation-status--${status}`}>
-      {t(status)}
+      Validation: <span className="validation-status__info">{t(status)}</span>
     </div>
   );
 };

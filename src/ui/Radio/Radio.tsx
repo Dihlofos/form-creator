@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Radio as RadioComponent, RadioProps } from 'antd';
 
-import 'antd/lib/radio/style/css';
 import { RadioField } from './types';
 
 type OwnRadioProps = RadioProps & { radioValues: RadioField[] };

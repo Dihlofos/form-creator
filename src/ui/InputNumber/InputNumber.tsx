@@ -4,8 +4,6 @@ import {
   InputNumberProps,
   Form,
 } from 'antd';
-import 'antd/lib/input-number/style/css';
-import 'antd/lib/input/style/css';
 
 import classNames from 'classnames';
 import { OwnProps } from './types';

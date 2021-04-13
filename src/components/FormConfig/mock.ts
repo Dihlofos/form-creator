@@ -2,6 +2,8 @@ import { FormStructure } from 'store/types';
 
 const FormMock: FormStructure = {
   title: 'Тестовая форма',
+  action: '',
+  method: 'POST',
   items: [
     {
       id: 'name',

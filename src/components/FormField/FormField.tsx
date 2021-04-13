@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Input, TextArea, Checkbox, Radio } from 'ui';
 import { FormFieldProps } from './types';
 
-const FormField: FC<FormFieldProps> = ({ field, onChange }) => {
+const FormField: FC<FormFieldProps> = ({ field, onChange, value, checked }) => {
   const {
     id,
     type,
@@ -23,6 +23,7 @@ const FormField: FC<FormFieldProps> = ({ field, onChange }) => {
         label={label}
         placeholder={placeholder}
         name={name}
+        value={String(value)}
         defaultValue={defaultValue}
         onChange={onChange}
       />
@@ -37,6 +38,7 @@ const FormField: FC<FormFieldProps> = ({ field, onChange }) => {
           id={id}
           type={type}
           name={name}
+          value={value}
           radioValues={radioValues}
           onChange={onChange}
         />
@@ -50,6 +52,7 @@ const FormField: FC<FormFieldProps> = ({ field, onChange }) => {
         id={id}
         type={type}
         name={name}
+        checked={Boolean(checked)}
         defaultChecked={defaultChecked}
         onChange={onChange}
       >
@@ -65,6 +68,7 @@ const FormField: FC<FormFieldProps> = ({ field, onChange }) => {
         placeholder={placeholder}
         label={label}
         name={name}
+        value={String(value)}
         defaultValue={defaultValue}
         onChange={onChange}
       />

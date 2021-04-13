@@ -1,15 +1,11 @@
-import { Content, ContentBox, Layout } from 'ui';
+import { ContentBox } from 'ui';
 import React, { FC } from 'react';
 import FormTabs from '../FormTabs/FormTabs';
 
 const App: FC = () => (
-  <Layout>
-    <Content>
-      <ContentBox>
-        <FormTabs />
-      </ContentBox>
-    </Content>
-  </Layout>
+  <ContentBox>
+    <FormTabs />
+  </ContentBox>
 );
 
 export default App;

@@ -10,7 +10,9 @@ exports[`FormResult test snapshot test 1`] = `
     Тестовая форма
   </h2>
   <form
+    action=""
     className="form-result__form"
+    method=""
   >
     <div
       className="form-result__field"
@@ -57,7 +59,7 @@ exports[`FormResult test snapshot test 1`] = `
           onKeyDown={[Function]}
           placeholder="Введите имя"
           type="text"
-          value="Женя Самсонов"
+          value="undefined"
         />
       </div>
     </div>
@@ -106,7 +108,7 @@ exports[`FormResult test snapshot test 1`] = `
           onKeyDown={[Function]}
           placeholder="Введите число"
           type="number"
-          value="5"
+          value="undefined"
         />
       </div>
     </div>
@@ -153,7 +155,7 @@ exports[`FormResult test snapshot test 1`] = `
         onKeyDown={[Function]}
         placeholder="Введите многострочный текст"
         style={Object {}}
-        value="Многострочный текст"
+        value="undefined"
       />
     </div>
     <div
@@ -163,11 +165,11 @@ exports[`FormResult test snapshot test 1`] = `
         className="ant-checkbox-wrapper"
       >
         <span
-          className="ant-checkbox ant-checkbox-checked"
+          className="ant-checkbox"
           style={Object {}}
         >
           <input
-            checked={true}
+            checked={false}
             className="ant-checkbox-input"
             id="checkbox"
             name="checkbox"
@@ -233,7 +235,7 @@ exports[`FormResult test snapshot test 1`] = `
           onKeyDown={[Function]}
           placeholder="Введите дату"
           type="date"
-          value=""
+          value="undefined"
         />
       </div>
     </div>

@@ -1,10 +1,13 @@
 .validation-status {
   font-size: 18px;
-  &--error {
-    color: var(--error);
-  }
 
-  &--success {
-    color: var(--success);
+  &__info {
+    .validation-status--error & {
+      color: var(--error);
+    }
+
+    .validation-status--success & {
+      color: var(--success);
+    }
   }
 }
