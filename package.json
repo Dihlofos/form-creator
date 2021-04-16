@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.ts,.tsx ./src/",
     "test": "jest",
     "predeploy": "npm run prod",
-    "deploy": "gh-pages -d prod"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Evgeny Samsonov",
   "license": "",
