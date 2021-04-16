@@ -1,7 +1,7 @@
 # Form creater
 
 link
-dihlofos.github.io/form-creator/
+https://dihlofos.github.io/form-creator/
 
 ### Creating form from JSON Object
 
