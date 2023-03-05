@@ -1,4 +1,4 @@
-# Form creater
+# Form creator
 
 link
 https://dihlofos.github.io/form-creator/
